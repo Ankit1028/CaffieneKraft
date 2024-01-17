@@ -17,12 +17,14 @@ interface PaymentFooterProps {
   price: PriceProps;
   buttonPressHandler: any;
   buttonTitle: string;
+  backgroundColor:string;
 }
 
 const PaymentFooter: React.FC<PaymentFooterProps> = ({
   price,
   buttonPressHandler,
   buttonTitle,
+  backgroundColor,
 }) => {
   return (
     <View style={styles.PriceFooter}>
@@ -33,7 +35,7 @@ const PaymentFooter: React.FC<PaymentFooterProps> = ({
         </Text>
       </View>
       <TouchableOpacity
-        style={styles.PayButton}
+        style={[styles.PayButton,{backgroundColor:backgroundColor}]}
         onPress={() => buttonPressHandler()}>
         <Text style={styles.ButtonText}>{buttonTitle}</Text>
       </TouchableOpacity>
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
     color: COLORS.primaryWhiteHex,
   },
   PayButton: {
-    backgroundColor: COLORS.primaryOrangeHex,
+    // backgroundColor: COLORS.primaryOrangeHex,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',

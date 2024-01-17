@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -36,7 +40,7 @@ const TabNavigator = () => {
               name="home"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
           ),
@@ -50,7 +54,7 @@ const TabNavigator = () => {
               name="cart"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
           ),
@@ -64,7 +68,7 @@ const TabNavigator = () => {
               name="like"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
           ),
@@ -78,7 +82,7 @@ const TabNavigator = () => {
               name="bell"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
           ),
@@ -89,9 +93,9 @@ const TabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    height: 80,
+    height: 75,
     position: 'absolute',
-    backgroundColor: COLORS.primaryBlackRGBA,
+    backgroundColor: COLORS.bottomTabNavigator,
     borderTopWidth: 0,
     elevation: 0,
     borderTopColor: 'transparent',

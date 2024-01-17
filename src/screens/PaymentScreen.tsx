@@ -173,6 +173,7 @@ const PaymentScreen = ({navigation, route}: any) => {
       </ScrollView>
 
       <PaymentFooter
+      backgroundColor='green'
         buttonTitle={`Pay with ${paymentMode}`}
         price={{price: route.params.amount, currency: '$'}}
         buttonPressHandler={buttonPressHandler}

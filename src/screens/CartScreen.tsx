@@ -87,8 +87,9 @@ const CartScreen = ({navigation, route}: any) => {
             )}
           </View>
 
-          {CartList.length != 0 ? (
+          {CartList.length !== 0 ? (
             <PaymentFooter
+              backgroundColor='green'
               buttonPressHandler={buttonPressHandler}
               buttonTitle="Pay"
               price={{price: CartPrice, currency: '$'}}
