@@ -146,6 +146,7 @@ const DetailsScreen = ({navigation, route}: any) => {
           </View>
         </View>
         <PaymentFooter
+        backgroundColor='purple'
           price={price}
           buttonTitle="Add to Cart"
           buttonPressHandler={() => {

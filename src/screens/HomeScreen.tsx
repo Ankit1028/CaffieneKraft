@@ -130,7 +130,8 @@ const HomeScreen = ({navigation}: any) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollViewFlex}>
         {/* App Header */}
-        <HeaderBar />
+        <Text style={styles.HeaderTitle}>CaffieneKraft</Text>
+        {/* <HeaderBar /> */}
 
         <Text style={styles.ScreenTitle}>
           Find the best{'\n'}coffee for you
@@ -150,7 +151,7 @@ const HomeScreen = ({navigation}: any) => {
               color={
                 searchText.length > 0
                   ? COLORS.primaryOrangeHex
-                  : COLORS.primaryLightGreyHex
+                  : COLORS.primaryDarkGreyHex
               }
             />
           </TouchableOpacity>
@@ -161,7 +162,7 @@ const HomeScreen = ({navigation}: any) => {
               setSearchText(text);
               searchCoffee(text);
             }}
-            placeholderTextColor={COLORS.primaryLightGreyHex}
+            placeholderTextColor={COLORS.secondaryBrownHex}
             style={styles.TextInputContainer}
           />
           {searchText.length > 0 ? (
@@ -173,7 +174,7 @@ const HomeScreen = ({navigation}: any) => {
                 style={styles.InputIcon}
                 name="close"
                 size={FONTSIZE.size_16}
-                color={COLORS.primaryLightGreyHex}
+                color={COLORS.secondaryBrownHex}
               />
             </TouchableOpacity>
           ) : (
@@ -207,8 +208,8 @@ const HomeScreen = ({navigation}: any) => {
                   style={[
                     styles.CategoryText,
                     categoryIndex.index == index
-                      ? {color: COLORS.primaryOrangeHex}
-                      : {},
+                      ? {color: COLORS.secondaryBrownHex}
+                      : {color: COLORS.primaryWhiteHex},
                   ]}>
                   {data}
                 </Text>
@@ -321,11 +322,18 @@ const styles = StyleSheet.create({
     color: COLORS.primaryWhiteHex,
     paddingLeft: SPACING.space_30,
   },
+  HeaderTitle: {
+    fontSize: FONTSIZE.size_30,
+    fontFamily: FONTFAMILY.poppins_bold,
+    color: COLORS.primaryWhiteHex,
+    paddingLeft: SPACING.space_30,
+    paddingVertical: SPACING.space_36,
+  },
   InputContainerComponent: {
     flexDirection: 'row',
     margin: SPACING.space_30,
     borderRadius: BORDERRADIUS.radius_20,
-    backgroundColor: COLORS.primaryDarkGreyHex,
+    backgroundColor: COLORS.primaryWhiteHex,
     alignItems: 'center',
   },
   InputIcon: {
@@ -333,10 +341,10 @@ const styles = StyleSheet.create({
   },
   TextInputContainer: {
     flex: 1,
-    height: SPACING.space_20 * 3,
+    height: SPACING.space_18 * 3,
     fontFamily: FONTFAMILY.poppins_medium,
     fontSize: FONTSIZE.size_14,
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
   CategoryScrollViewStyle: {
     paddingHorizontal: SPACING.space_20,
@@ -350,7 +358,7 @@ const styles = StyleSheet.create({
   },
   CategoryText: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_16,
+    fontSize: FONTSIZE.size_18,
     color: COLORS.primaryLightGreyHex,
     marginBottom: SPACING.space_4,
   },
@@ -358,7 +366,8 @@ const styles = StyleSheet.create({
     height: SPACING.space_10,
     width: SPACING.space_10,
     borderRadius: BORDERRADIUS.radius_10,
-    backgroundColor: COLORS.primaryOrangeHex,
+    // backgroundColor: COLORS.primaryOrangeHex,
+    backgroundColor: COLORS.secondaryBrownHex,
   },
   FlatListContainer: {
     gap: SPACING.space_20,
@@ -372,11 +381,11 @@ const styles = StyleSheet.create({
     paddingVertical: SPACING.space_36 * 3.6,
   },
   CoffeeBeansTitle: {
-    fontSize: FONTSIZE.size_18,
+    fontSize: FONTSIZE.size_20,
     marginLeft: SPACING.space_30,
     marginTop: SPACING.space_20,
     fontFamily: FONTFAMILY.poppins_medium,
-    color: COLORS.secondaryLightGreyHex,
+    color: COLORS.primaryWhiteHex,
   },
 });
 

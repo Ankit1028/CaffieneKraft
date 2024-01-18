@@ -51,7 +51,7 @@ const CoffeeCard: React.FC<CoffeeCardProps> = ({
       start={{x: 0, y: 0}}
       end={{x: 1, y: 1}}
       style={styles.CardLinearGradientContainer}
-      colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}>
+      colors={['#FFFFFF', '#FFFFFF']}>
       <ImageBackground
         source={imagelink_square}
         style={styles.CardImageBG}
@@ -87,7 +87,7 @@ const CoffeeCard: React.FC<CoffeeCardProps> = ({
           <BGIcon
             color={COLORS.primaryWhiteHex}
             name={'add'}
-            BGColor={COLORS.primaryOrangeHex}
+            BGColor={COLORS.primaryGreenHex}
             size={FONTSIZE.size_10}
           />
         </TouchableOpacity>
@@ -128,13 +128,13 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_14,
   },
   CardTitle: {
-    fontFamily: FONTFAMILY.poppins_medium,
-    color: COLORS.primaryWhiteHex,
+    fontFamily: FONTFAMILY.poppins_semibold,
+    color: COLORS.secondaryBrownHex,
     fontSize: FONTSIZE.size_16,
   },
   CardSubtitle: {
-    fontFamily: FONTFAMILY.poppins_light,
-    color: COLORS.primaryWhiteHex,
+    fontFamily: FONTFAMILY.poppins_medium,
+    color: COLORS.secondaryBrownHex,
     fontSize: FONTSIZE.size_10,
   },
   CardFooterRow: {
@@ -145,11 +145,11 @@ const styles = StyleSheet.create({
   },
   CardPriceCurrency: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    color: COLORS.primaryOrangeHex,
+    color: COLORS.primaryGreenHex,
     fontSize: FONTSIZE.size_18,
   },
   CardPrice: {
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
 });
 

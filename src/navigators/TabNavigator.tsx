@@ -23,13 +23,13 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBarStyle,
-        tabBarBackground: () => (
-          <BlurView
-            overlayColor=""
-            blurAmount={15}
-            style={styles.BlurViewStyles}
-          />
-        ),
+        // tabBarBackground: () => (
+        //   <BlurView
+        //     overlayColor=""
+        //     blurAmount={15}
+        //     style={styles.BlurViewStyles}
+        //   />
+        // ),
       }}>
       <Tab.Screen
         name="Home"
@@ -39,9 +39,10 @@ const TabNavigator = () => {
             <CustomIcon
               name="home"
               size={25}
-              color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
+              style={
+                focused ? styles.activeTabBarIconStyle : styles.tabBarIconStyle
               }
+              color={focused ? COLORS.primaryBrownHex : COLORS.primaryWhiteHex}
             />
           ),
         }}></Tab.Screen>
@@ -53,8 +54,9 @@ const TabNavigator = () => {
             <CustomIcon
               name="cart"
               size={25}
-              color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
+              color={focused ? COLORS.primaryBrownHex : COLORS.primaryWhiteHex}
+              style={
+                focused ? styles.activeTabBarIconStyle : styles.tabBarIconStyle
               }
             />
           ),
@@ -67,8 +69,9 @@ const TabNavigator = () => {
             <CustomIcon
               name="like"
               size={25}
-              color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
+              color={focused ? COLORS.primaryBrownHex : COLORS.primaryWhiteHex}
+              style={
+                focused ? styles.activeTabBarIconStyle : styles.tabBarIconStyle
               }
             />
           ),
@@ -81,8 +84,9 @@ const TabNavigator = () => {
             <CustomIcon
               name="bell"
               size={25}
-              color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
+              color={focused ? COLORS.primaryBrownHex : COLORS.primaryWhiteHex}
+              style={
+                focused ? styles.activeTabBarIconStyle : styles.tabBarIconStyle
               }
             />
           ),
@@ -95,10 +99,12 @@ const styles = StyleSheet.create({
   tabBarStyle: {
     height: 75,
     position: 'absolute',
-    backgroundColor: COLORS.bottomTabNavigator,
+    backgroundColor: '#40966C',
     borderTopWidth: 0,
     elevation: 0,
     borderTopColor: 'transparent',
+    margin: 5,
+    borderRadius: 30,
   },
   BlurViewStyles: {
     position: 'absolute',
@@ -106,6 +112,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+  },
+  tabBarIconStyle: {},
+  activeTabBarIconStyle: {
+    padding: '15%',
+    backgroundColor: '#FFFAEA',
+    // bottom: '20%',
+    borderRadius: 40,
   },
 });
 
