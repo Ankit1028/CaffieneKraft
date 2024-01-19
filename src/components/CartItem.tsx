@@ -46,7 +46,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          colors={[COLORS.primaryWhiteHex, COLORS.primaryWhiteHex]}
           style={styles.CartItemLinearGradient}>
           <View style={styles.CartItemRow}>
             <Image source={imagelink_square} style={styles.CartItemImage} />
@@ -120,7 +120,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          colors={[COLORS.primaryWhiteHex, COLORS.primaryWhiteHex]}
           style={styles.CartItemSingleLinearGradient}>
           <View>
             <Image
@@ -210,14 +210,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   CartItemTitle: {
-    fontFamily: FONTFAMILY.poppins_medium,
+    fontFamily: FONTFAMILY.poppins_bold,
     fontSize: FONTSIZE.size_18,
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
   CartItemSubtitle: {
-    fontFamily: FONTFAMILY.poppins_regular,
+    fontFamily: FONTFAMILY.poppins_medium,
     fontSize: FONTSIZE.size_12,
-    color: COLORS.secondaryLightGreyHex,
+    color: COLORS.secondaryBrownHex,
   },
   CartItemRoastedContainer: {
     height: 50,
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
   CartItemRoastedText: {
     fontFamily: FONTFAMILY.poppins_regular,
     fontSize: FONTSIZE.size_10,
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
   CartItemSizeRowContainer: {
     flex: 1,
@@ -246,43 +246,46 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   SizeBox: {
-    backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: COLORS.primaryWhiteHex,
     height: 40,
     width: 100,
     borderRadius: BORDERRADIUS.radius_10,
     justifyContent: 'center',
     alignItems: 'center',
+    marginRight: '5%',
+    borderColor: COLORS.primaryDarkGreyHex,
+    borderWidth: 2,
   },
   SizeText: {
-    fontFamily: FONTFAMILY.poppins_medium,
-    color: COLORS.secondaryLightGreyHex,
+    fontFamily: FONTFAMILY.poppins_bold,
+    color: COLORS.secondaryBrownHex,
   },
   SizeCurrency: {
-    fontFamily: FONTFAMILY.poppins_semibold,
+    fontFamily: FONTFAMILY.poppins_bold,
     fontSize: FONTSIZE.size_18,
-    color: COLORS.primaryOrangeHex,
+    color: COLORS.primaryGreenHex,
   },
   SizePrice: {
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
   CartItemIcon: {
-    backgroundColor: COLORS.primaryOrangeHex,
+    backgroundColor: COLORS.primaryGreenHex,
     padding: SPACING.space_12,
     borderRadius: BORDERRADIUS.radius_10,
   },
   CartItemQuantityContainer: {
-    backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: COLORS.primaryWhiteHex,
     width: 80,
     borderRadius: BORDERRADIUS.radius_10,
     borderWidth: 2,
-    borderColor: COLORS.primaryOrangeHex,
+    borderColor: COLORS.primaryGreenHex,
     alignItems: 'center',
     paddingVertical: SPACING.space_4,
   },
   CartItemQuantityText: {
     fontFamily: FONTFAMILY.poppins_semibold,
     fontSize: FONTSIZE.size_16,
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
   CartItemSingleLinearGradient: {
     flexDirection: 'row',
