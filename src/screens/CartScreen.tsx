@@ -89,7 +89,7 @@ const CartScreen = ({navigation, route}: any) => {
 
           {CartList.length !== 0 ? (
             <PaymentFooter
-              backgroundColor='green'
+              backgroundColor={COLORS.primaryGreenHex}
               buttonPressHandler={buttonPressHandler}
               buttonTitle="Pay"
               price={{price: CartPrice, currency: '$'}}

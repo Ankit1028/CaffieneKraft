@@ -30,7 +30,7 @@ const PaymentMethod: React.FC<PaymentMethodProps> = ({
         {
           borderColor:
             paymentMode == name
-              ? COLORS.primaryOrangeHex
+              ? COLORS.primaryLightYellow
               : COLORS.primaryGreyHex,
         },
       ]}>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   PaymentPrice: {
     fontFamily: FONTFAMILY.poppins_regular,
     fontSize: FONTSIZE.size_16,
-    color: COLORS.secondaryLightGreyHex,
+    color: COLORS.primaryWhiteHex,
   },
   PaymentImage: {
     height: SPACING.space_30,

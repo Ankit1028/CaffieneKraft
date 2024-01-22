@@ -106,8 +106,6 @@ const styles = StyleSheet.create({
     // fontFamily: FONTFAMILY.poppins_semibold,
     fontStyle: 'italic',
     color: COLORS.secondaryBrownHex,
-    textDecorationColor: 'white',
-    textDecorationStyle: 'dotted',
     textDecorationLine: 'underline',
   },
 });

@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   HeaderPrice: {
     fontFamily: FONTFAMILY.poppins_medium,
     fontSize: FONTSIZE.size_18,
-    color: COLORS.primaryOrangeHex,
+    color: COLORS.primaryGreenHex,
   },
   ListContainer: {
     gap: SPACING.space_20,

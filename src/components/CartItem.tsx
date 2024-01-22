@@ -46,7 +46,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}
-          colors={[COLORS.primaryWhiteHex, COLORS.primaryWhiteHex]}
+          colors={[COLORS.primaryWhiteHex, COLORS.primaryLightYellow]}
           style={styles.CartItemLinearGradient}>
           <View style={styles.CartItemRow}>
             <Image source={imagelink_square} style={styles.CartItemImage} />
@@ -120,7 +120,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}
-          colors={[COLORS.primaryWhiteHex, COLORS.primaryWhiteHex]}
+          colors={[COLORS.primaryWhiteHex, COLORS.primaryLightYellow]}
           style={styles.CartItemSingleLinearGradient}>
           <View>
             <Image

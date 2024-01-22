@@ -30,7 +30,7 @@ const OrderItemCard: React.FC<OrderItemCardProps> = ({
     <LinearGradient
       start={{x: 0, y: 0}}
       end={{x: 1, y: 1}}
-      colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+      colors={[COLORS.primaryGreyHex, COLORS.primaryDarkGreyHex]}
       style={styles.CardLinearGradient}>
       <View style={styles.CardInfoContainer}>
         <View style={styles.CardImageInfoContainer}>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   CardCurrency: {
     fontFamily: FONTFAMILY.poppins_semibold,
     fontSize: FONTSIZE.size_20,
-    color: COLORS.primaryOrangeHex,
+    color: COLORS.primaryGreenHex,
   },
   CardPrice: {
     color: COLORS.primaryWhiteHex,
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   PriceCurrency: {
     fontFamily: FONTFAMILY.poppins_semibold,
     fontSize: FONTSIZE.size_18,
-    color: COLORS.primaryOrangeHex,
+    color: COLORS.primaryGreenHex,
   },
   Price: {
     color: COLORS.primaryWhiteHex,
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: FONTFAMILY.poppins_semibold,
     fontSize: FONTSIZE.size_18,
-    color: COLORS.primaryOrangeHex,
+    color: COLORS.primaryGreenHex,
   },
 });
 
