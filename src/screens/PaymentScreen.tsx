@@ -106,7 +106,7 @@ const PaymentScreen = ({navigation, route}: any) => {
                 {
                   borderColor:
                     paymentMode == 'Credit Card'
-                      ? COLORS.primaryOrangeHex
+                      ? COLORS.primaryLightYellow
                       : COLORS.primaryGreyHex,
                 },
               ]}>
@@ -116,7 +116,7 @@ const PaymentScreen = ({navigation, route}: any) => {
                   start={{x: 0, y: 0}}
                   end={{x: 1, y: 1}}
                   style={styles.LinearGradientStyle}
-                  colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}>
+                  colors={[COLORS.primaryGreyHex, COLORS.primaryDarkGreyHex]}>
                   <View style={styles.CreditCardRow}>
                     <CustomIcon
                       name="chip"

@@ -30,7 +30,7 @@ const OrderItemCard: React.FC<OrderItemCardProps> = ({
     <LinearGradient
       start={{x: 0, y: 0}}
       end={{x: 1, y: 1}}
-      colors={[COLORS.primaryGreyHex, COLORS.primaryDarkGreyHex]}
+      colors={[COLORS.primaryWhiteHex, COLORS.primaryLightYellow]}
       style={styles.CardLinearGradient}>
       <View style={styles.CardInfoContainer}>
         <View style={styles.CardImageInfoContainer}>
@@ -55,7 +55,7 @@ const OrderItemCard: React.FC<OrderItemCardProps> = ({
                   styles.SizeText,
                   {
                     fontSize:
-                      type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                      type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_14,
                   },
                 ]}>
                 {data.size}
@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
     borderRadius: BORDERRADIUS.radius_15,
   },
   CardTitle: {
-    fontFamily: FONTFAMILY.poppins_medium,
-    fontSize: FONTSIZE.size_18,
-    color: COLORS.primaryWhiteHex,
+    fontFamily: FONTFAMILY.poppins_semibold,
+    fontSize: FONTSIZE.size_16,
+    color: COLORS.secondaryBrownHex,
   },
   CardSubtitle: {
-    fontFamily: FONTFAMILY.poppins_regular,
+    fontFamily: FONTFAMILY.poppins_medium,
     fontSize: FONTSIZE.size_12,
-    color: COLORS.secondaryLightGreyHex,
+    color: COLORS.secondaryBrownHex,
   },
   CardCurrency: {
     fontFamily: FONTFAMILY.poppins_semibold,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     color: COLORS.primaryGreenHex,
   },
   CardPrice: {
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryBrownHex,
   },
   CardTableRow: {
     flex: 1,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   SizeBoxLeft: {
-    backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: COLORS.primaryWhiteHex,
     height: 45,
     flex: 1,
     borderTopLeftRadius: BORDERRADIUS.radius_10,
@@ -141,10 +141,10 @@ const styles = StyleSheet.create({
   },
   SizeText: {
     fontFamily: FONTFAMILY.poppins_medium,
-    color: COLORS.secondaryLightGreyHex,
+    color: COLORS.primaryDarkGreyHex,
   },
   PriceBoxRight: {
-    backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: COLORS.primaryWhiteHex,
     height: 45,
     flex: 1,
     borderTopRightRadius: BORDERRADIUS.radius_10,
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     color: COLORS.primaryGreenHex,
   },
   Price: {
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.secondaryDarkGreyHex,
   },
   CardQuantityPriceText: {
     flex: 1,
